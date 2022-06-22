@@ -27,5 +27,5 @@ B = FOREACH A GENERATE name, color;
 C = FILTER B BY (color matches '.*[aeiou]$');
 DUMP C;
 
-STORE C INTO 'output/' ;
+STORE C INTO 'output/' using PigStorage(',');
 

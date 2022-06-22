@@ -26,5 +26,5 @@ B = FOREACH A GENERATE name, color;
 C = FILTER B BY NOT (color  MATCHES '.*b.*');
 DUMP B;
 
-STORE C INTO 'output/' ;
+STORE C INTO 'output/' using PigStorage(',');
 
